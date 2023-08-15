@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option go_package = "./;pb";
+
+package test;
+
+service TestService {
+  rpc TestMethod(Empty) returns (Empty) {}
+}
+
+message Empty {}

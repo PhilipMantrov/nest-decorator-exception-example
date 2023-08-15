@@ -1,0 +1,17 @@
+version: v1
+managed:
+  enabled: true
+plugins:
+  - plugin: ts_proto
+    out: definitions/generated
+    opt:
+      - env=node
+      - snakeToCamel=false
+      - esModuleInterop=true
+      - nestJs=true
+      - useDate=true
+      - useOptionals=messages
+      - addGrpcMetadata=true
+      - returnObservable=true
+      - forceLong=bigint
+    strategy: all
